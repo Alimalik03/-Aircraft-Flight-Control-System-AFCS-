@@ -21,7 +21,7 @@ File Descriptions
 - Control System Toolbox (for `ss`, `lqr`, `lsim`)
 
 
-  ##  How to Run
+##  How to Run
 
 Follow these steps in MATLAB to simulate and analyze the aircraft system:
 
