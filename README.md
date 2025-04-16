@@ -61,10 +61,10 @@ run('Lateral_dynamics.m')
 ---
 
 
-##  Outputs
+##  Example Output
 - Plot 1
-- Time histories of key states (pitch, roll, yaw, velocities)
-- Control inputs (elevator, aileron, rudder, throttle)
+- Trimmed
+- Time histories of key states (pitch, roll, yaw, velocities) and Control inputs (elevator, aileron, rudder, throttle)
 ![States Vs Time](./Aircraft%20States.png)
 
 - Plot 2
