@@ -66,9 +66,9 @@ run('Lateral_dynamics.m')
 - Steady Climb
 - Time histories of key states (pitch, roll, yaw, velocities)
 - Control inputs (elevator, aileron, rudder, throttle)
-![States Vs Time](./Aircraft States.png)
+![States Vs Time](./Aircraft%States.png)
 
 - Plot 2
 - 3D trajectory visualization
-![Aircraft Trajectory](./3D Aircraft Trajectory.png)
+![Aircraft Trajectory](./3D%Aircraft%Trajectory.png)
 ---
