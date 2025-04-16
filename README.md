@@ -13,3 +13,54 @@ File Descriptions
 | `linearization.m`      | Function that computes linear A, B, C, D matrices from the nonlinear model. |
 | `Longitudinal_dynamics.m` | Script to analyze longitudinal dynamics with step response. |
 | `Lateral_dynamics.m` | Script to analyze lateral dynamics with step response. |
+
+
+##  Requirements
+- MATLAB R2020+ (tested)
+- Optimization Toolbox (for `fsolve`)
+- Control System Toolbox (for `ss`, `lqr`, `lsim`)
+
+
+  ## 🛠 How to Run
+
+Follow these steps in MATLAB to simulate and analyze the aircraft system:
+
+###  1. **Trim the Aircraft**
+
+Compute the steady-level/ constant climb / co-ordinated turn flight condition using nonlinear equations:
+```matlab
+run('Fsolve_Wrapper.m')
+```
+> This will display the trimmed pitch, angle of attack, and control inputs required to maintain steady flight.
+
+---
+
+### ✈ 2. **Run Full 6DOF Nonlinear Simulation**
+
+Simulate a controlled flight using the nonlinear equations of motion and an autopilot controller:
+```matlab
+run('Initialisation.m')
+```
+> Generates time histories of aircraft states and a 3D trajectory plot under closed-loop control.
+
+---
+
+###  3. **Linearize the Dynamics**
+
+Linearize the nonlinear system about the trimmed condition to study its small signal behavior:
+```matlab
+run('Longitudinal_dynamics.m')
+```
+> Visualizes the step response of the longitudinal model (e.g., pitch angle, pitch rate).
+
+---
+
+
+##  Outputs
+
+- Time histories of key states (pitch, roll, yaw, velocities)
+- Control inputs (elevator, aileron, rudder, throttle)
+- Trim conditions
+- 3D trajectory visualization
+
+---
