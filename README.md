@@ -21,7 +21,7 @@ File Descriptions
 - Control System Toolbox (for `ss`, `lqr`, `lsim`)
 
 
-  ## 🛠 How to Run
+  ##  How to Run
 
 Follow these steps in MATLAB to simulate and analyze the aircraft system:
 
@@ -35,7 +35,7 @@ run('Fsolve_Wrapper.m')
 
 ---
 
-### ✈ 2. **Run Full 6DOF Nonlinear Simulation**
+### 2. **Run Full 6DOF Nonlinear Simulation**
 
 Simulate a controlled flight using the nonlinear equations of motion and an autopilot controller:
 ```matlab
