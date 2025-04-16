@@ -1,5 +1,5 @@
 # -Aircraft-Flight-Control-System-AFCS-
-This MATLAB-based repository implements a 6-DOF nonlinear simulation and control system for a fixed-wing aircraft. The system includes  Equations of motion Model, trimming, linearization, and a modular controller for pitch, roll, and airspeed.
+This MATLAB-based repository implements a 6-DOF nonlinear simulation and control system for a fixed-wing aircraft. The system includes  Equations of motion Model, Trimming, Linearization, and a Modular controller for pitch, roll, and airspeed employing state feedback.
 
 File Descriptions
 
