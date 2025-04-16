@@ -27,21 +27,25 @@ Follow these steps in MATLAB to simulate and analyze the aircraft system:
 
 ###  1. **Trim the Aircraft**
 
-Compute the steady-level/ constant climb / co-ordinated turn flight condition using nonlinear equations:
+Compute the steady-level/ constant climb / co-ordinated turn flight condition using **"Main_Trim.mat"** script.
+Run the Wrapper script to use fsolve in computing trim states
 ```matlab
 run('Fsolve_Wrapper.m')
 ```
-> This will display the trimmed pitch, angle of attack, and control inputs required to maintain steady flight.
+> This will display the trimmed pitch,trimmed bank, trimmed angle of attack etc and control inputs required to various trim manoeuvers.
 
 ---
 
 ### 2. **Run Full 6DOF Nonlinear Simulation**
 
-Simulate a controlled flight using the nonlinear equations of motion and an autopilot controller:
+Simulate a controlled flight using the nonlinear equations of motion and an modular controller:
 ```matlab
 run('Initialisation.m')
+
 ```
-> Generates time histories of aircraft states and a 3D trajectory plot under closed-loop control.
+>Initialise states and control inputs as a result of the wrapper file, to visualise time response
+>Use **flight_controller.m** function in **initialisation** script to implement pitch, roll, speed controller
+> Generates time histories of aircraft states.
 
 ---
 
@@ -50,7 +54,6 @@ run('Initialisation.m')
 Linearize the nonlinear system about the trimmed condition to study behavior:
 ```matlab
 run('Longitudinal_dynamics.m')
-```matlab
 run('Lateral_dynamics.m')
 ```
 > Visualizes the step response of the longitudinal and lateral dynamics (e.g., pitch angle, pitch rate, roll angle, roll rate, yaw angle, yaw rate).
@@ -63,9 +66,9 @@ run('Lateral_dynamics.m')
 - Steady Climb
 - Time histories of key states (pitch, roll, yaw, velocities)
 - Control inputs (elevator, aileron, rudder, throttle)
-![States Vs Time](Aircraft States.png)
+![States Vs Time](./Aircraft States.png)
 
 - Plot 2
 - 3D trajectory visualization
-![Aircraft Trajectory](3D Aircraft Trajectory.png)
+![Aircraft Trajectory](./3D Aircraft Trajectory.png)
 ---
