@@ -47,20 +47,25 @@ run('Initialisation.m')
 
 ###  3. **Linearize the Dynamics**
 
-Linearize the nonlinear system about the trimmed condition to study its small signal behavior:
+Linearize the nonlinear system about the trimmed condition to study behavior:
 ```matlab
 run('Longitudinal_dynamics.m')
+```matlab
+run('Lateral_dynamics.m')
 ```
-> Visualizes the step response of the longitudinal model (e.g., pitch angle, pitch rate).
+> Visualizes the step response of the longitudinal and lateral dynamics (e.g., pitch angle, pitch rate, roll angle, roll rate, yaw angle, yaw rate).
 
 ---
 
 
 ##  Outputs
-
+- Plot 1
+- Steady Climb
 - Time histories of key states (pitch, roll, yaw, velocities)
 - Control inputs (elevator, aileron, rudder, throttle)
-- Trim conditions
-- 3D trajectory visualization
+![States Vs Time](./3D Aircraft States.png)
 
+- Plot 2
+- 3D trajectory visualization
+![Aircraft Trajectory](./3D Aircraft Trajectory.png)
 ---
